@@ -4,8 +4,10 @@ import aiodbl.utils.errors as errs
 
 class Client:
     def __init__(self, token=None):
-
-        self.token = token
+        if token:
+            self.token = token
+        else:
+            raise errs.MissingArg('you need a token lol')
         self.loop = asyncio.get_event_loop()
         self.session = aiohttp.ClientSession(loop=self.loop)
         self.headers = {
