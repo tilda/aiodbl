@@ -1,1 +1,1 @@
-import aiodbl
+import aiodbl.client
