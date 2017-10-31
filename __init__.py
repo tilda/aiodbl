@@ -1,1 +1,1 @@
-import aiodbl.client
+from aiodbl.client import Client
